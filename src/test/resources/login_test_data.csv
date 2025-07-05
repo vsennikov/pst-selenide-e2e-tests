@@ -1,0 +1,5 @@
+email,password,expectedErrorMessage
+customer@practicesoftwaretesting.com,"wrong-password","Invalid email or password"
+"not_a_user@example.com","some_password","Invalid email or password"
+customer@practicesoftwaretesting.com,,"Password is required"
+,"welcome01","Email is required"
