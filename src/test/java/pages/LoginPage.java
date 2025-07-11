@@ -1,7 +1,10 @@
+package pages;
+
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -36,6 +39,12 @@ public class LoginPage {
     @Step("Check for error message: {expectedText}")
     public LoginPage checkErrorMessage(String expectedText) {
         errorMessage.shouldHave(text(expectedText));
+        return this;
+    }
+
+    @Step("Verify that user is on the Login Page")
+    public LoginPage verifyOnPage() {
+        loginButton.shouldBe(visible);
         return this;
     }
 }
