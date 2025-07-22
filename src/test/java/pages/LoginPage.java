@@ -20,12 +20,20 @@ public class LoginPage {
         return this;
     }
 
-    @Step("Login as user with email: {email}")
+    @Step("Login as user, expecting to go to Account Page")
     public AccountPage successfulLogin(String email, String password) {
         emailInput.setValue(email);
         passwordInput.setValue(password);
         loginButton.click();
         return new AccountPage();
+    }
+
+    @Step("Login as user during checkout, expecting to go to Checkout Page")
+    public CheckoutPage successfulLoginDuringCheckout(String email, String password) {
+        emailInput.setValue(email);
+        passwordInput.setValue(password);
+        loginButton.click();
+        return new CheckoutPage();
     }
 
     @Step("Attempt to login with email: {email}")

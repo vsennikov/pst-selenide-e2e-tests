@@ -9,9 +9,18 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProductDetailPage {
     private final SelenideElement productName = $("[data-test='product-name']");
-    @Step("Verify that user is on the product Page")
+    private final SelenideElement addToCartButton = $("[data-test='add-to-cart]");
+
+
+    @Step("Verify that user is on the product Page of {selectedProduct}")
     public ProductDetailPage verifyOnPage(String selectedProduct) {
         productName.shouldBe(visible).shouldHave(exactText(selectedProduct));
+        return this;
+    }
+
+    @Step("Click 'add to cart' button")
+    public ProductDetailPage clickAddToCartButton(){
+        addToCartButton.click();
         return this;
     }
 }
