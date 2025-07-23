@@ -29,13 +29,13 @@ public class RegistrationPage {
 
     @Step("Set first name: {firstName}")
     public RegistrationPage setFirstNameInput(String firstName) {
-        this.firstNameInput.setValue(firstName);
+        firstNameInput.setValue(firstName);
         return this;
     }
 
     @Step("Set last name: {lastName}")
     public RegistrationPage setLastNameInput(String lastName) {
-        this.lastNameInput.setValue(lastName);
+        lastNameInput.setValue(lastName);
         return this;
     }
 
@@ -47,7 +47,7 @@ public class RegistrationPage {
 
     @Step("Set street: {street}")
     public RegistrationPage setStreetInput(String street) {
-        this.streetInput.setValue(street);
+        streetInput.setValue(street);
         return this;
     }
 
@@ -59,37 +59,37 @@ public class RegistrationPage {
 
     @Step("Set city: {city}")
     public RegistrationPage setCityInput(String city) {
-        this.cityInput.setValue(city);
+        cityInput.setValue(city);
         return this;
     }
 
     @Step("Set state: {state}")
     public RegistrationPage setStateInput(String state) {
-        this.stateInput.setValue(state);
+        stateInput.setValue(state);
         return this;
     }
 
     @Step("Select country: {country}")
     public RegistrationPage selectCountry(String country) {
-        this.countryInput.selectOption(country);
+        countryInput.selectOption(country);
         return this;
     }
 
     @Step("Set phone: {phone}")
     public RegistrationPage setPhoneInput(String phone) {
-        this.phoneInput.setValue(phone);
+        phoneInput.setValue(phone);
         return this;
     }
 
     @Step("Set email: {email}")
     public RegistrationPage setEmailInput(String email) {
-        this.emailInput.setValue(email);
+        emailInput.setValue(email);
         return this;
     }
 
     @Step("Set password: {password}")
     public RegistrationPage setPasswordInput(String password) {
-        this.passwordInput.setValue(password);
+        passwordInput.setValue(password);
         return this;
     }
 

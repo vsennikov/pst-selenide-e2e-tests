@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class CartPage {
     private final ElementsCollection cartItemRows = $$("tbody tr");
     private final SelenideElement cartTotalValue = $("[data-test='total-price']");
-    private final SelenideElement proceedToCheckoutButton = $("[data-test='proceed-to-checkout']");
+    private final SelenideElement proceedToCheckoutButton = $("[data-test='proceed-1']");
 
     @Step("Get cart item by name: {productName}")
     public CartItem getCartItem(String productName) {
