@@ -1,3 +1,5 @@
+package tests;
+
 import config.ProjectConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,3 +1,4 @@
+package tests;
 
 import config.ProjectConfig;
 import io.qameta.allure.*;

@@ -5,6 +5,8 @@ import com.codeborne.selenide.SelenideElement;
 
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
@@ -97,5 +99,19 @@ public class RegistrationPage {
     public LoginPage clickRegisterButton() {
         registerButton.click();
         return new LoginPage();
+    }
+
+    @Step("Click Register button expecting a validation error")
+    public RegistrationPage clickRegisterButtonExpectingError() {
+        registerButton.click();
+        return this;
+    }
+
+    @Step("Check validation error for field '{fieldName}': {expectedErrorMessage}")
+    public RegistrationPage checkValidationErrorForField(String fieldName, String expectedErrorMessage) {
+        String errorLocator = String.format("[data-test='%s-error']", fieldName);
+
+        $(errorLocator).shouldBe(visible).shouldHave(text(expectedErrorMessage));
+        return this;
     }
 }

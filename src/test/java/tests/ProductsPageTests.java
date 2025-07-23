@@ -1,3 +1,5 @@
+package tests;
+
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.ElementsCollection;
 import config.ProjectConfig;

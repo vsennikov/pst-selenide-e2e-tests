@@ -1,3 +1,5 @@
+package tests;
+
 import com.github.javafaker.Faker;
 import config.ProjectConfig;
 import io.qameta.allure.*;
@@ -28,7 +30,7 @@ public class RegistrationTests {
     @Story("Successful registration")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("A new user should be able to register successfully with valid data")
-    void userCanRegisterSuccessfully(){
+    void userCanRegisterSuccessfully() {
         Faker faker = new Faker(new Locale("en"));
         String firstName = faker.name().firstName();
         String lastName = faker.name().lastName();

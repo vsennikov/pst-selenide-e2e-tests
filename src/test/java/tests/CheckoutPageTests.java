@@ -1,3 +1,5 @@
+package tests;
+
 import com.github.javafaker.Faker;
 import config.ProjectConfig;
 import io.qameta.allure.Epic;
