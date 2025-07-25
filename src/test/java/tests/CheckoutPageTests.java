@@ -62,7 +62,7 @@ public class CheckoutPageTests {
                 faker.address().streetAddress(),
                 faker.address().city(),
                 faker.address().state(),
-                "United States",
+                "Austria",
                 faker.address().zipCode()
         );
 
